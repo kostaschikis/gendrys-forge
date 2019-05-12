@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sword</title>
+</head>
+<body id="sword">
+    <!-- Navbar -->
+    <div id="navbar">
+        <h1 class="logo">
+            <span class="text-primary">
+                Gendry's Forge
+            </span>
+        </h1>
+         <ul>
+             <li><a href="./index.html">Home</a></li>
+             <li><a href="./index.html#who">Who</a></li>
+             <li><a href="#order">Order</a></li>
+         </ul>
+    </div>
+    <!-- Order Details -->
+    <div id="sword" class="bg-dark">
+        <div id="sword_overlay">
+            <h2 class="m-heading">Create Your Own Sword</h2>
+            <!-- Make Your Sword -->
+            <div id="sword_content">
+                <div id="metals">
+                    <h4>Metals</h4>
+                    <form onsubmit='getMetalType()'>
+                        <input type="radio" name="metal_type" id="iron">  Iron <span class="coins">(200 Coins)</span><br>
+                        <input type="radio" name="metal_type" id="gold">  Gold <span class="coins">(350 Coins)</span><br>
+                        <input type="submit" value="OK" class="btn-s"> 
+                    </form>
+                </div>
+                <div id="sword_image">
+                    <img src="./img/swords/blank.png">
+                </div>
+                <div id="house">
+                    <h4>House</h4>
+                    <form name="house_form" onsubmit='getHouseType()'>
+                        <input type="checkbox" name="house" value="Targaryen" onclick='chkHouse(0)'> Targaryen <span class="coins">(15 Coins)</span><br>
+                        <input type="checkbox" name="house" value="Stark" onclick='chkHouse(1)'> Stark <span class="coins">(25 Coins)</span><br>
+                        <input type="checkbox" name="house" value="Lannister" onclick='chkHouse(2)'> Lannister <span class="coins">(30 Coins)</span><br>
+                        <input type="checkbox" name="house" value="Greyjoy" onclick='chkHouse(3)'> Greyjoy <span class="coins">(35 Coins)</span><br><br>
+                        <input type="submit" value="OK" class="btn-s">
+                    </form>
+                </div>
+            </div>
+            <!-- Randomize Sword -->
+            <div id="random_sword" class="selected">
+                <button type="button" id="randomize" class="btn" onclick="randomizeSword()">Randomize</button>
+            </div>
+            <!-- Delivery & Payment Options -->
+            <!-- Delivery -->
+            <div id="deliver_n_pay">
+                <div id="delivery_content">
+                    <h2 class="m-heading">Delivery Fee</h2>
+                    <ul>
+                        <li>*For orders less than <span class="coins">225 coins</span> the fee is <span class="coins">3 coins</span>*</li>
+                        <li>*For orders more than <span class="coins">225 coins</span> the fee is <span class="coins">2 coins</span>*</li>
+                    </ul>
+                    <form>
+                        <input type="checkbox" id="express" onchange="updateExpress()"> Express Delivery ? <span class="coins">(+5 Coins)</span>
+                    </form>
+                    <p>(Delivery within the next 3 days)</p>
+                    <input type="text" id="dev_price" readonly> <br>
+                    <h3>Quantity</h3>
+                    <select id="quantity" onchange="quantityChange()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> 
+                </div>
+                <!-- Payment -->
+                <div id="payment">
+                    <h2 class="m-heading">Payment</h2>
+                    <p>Payment Method</p>
+                        <div id="creditcard">
+                            <input type="radio" name="card_type" id="card_type">  Visa<br>            
+                            <input type="radio" name="card_type" id="card_type">  Mastercard<br>
+                        </div>
+                        <div id="creditcard_numbers">
+                            <input type="text" id="card_number" maxlength="4" placeholder="XXXX" onkeypress="inputNumber(event)">
+                            <input type="text" id="card_number" maxlength="4" placeholder="XXXX" onkeypress="inputNumber(event)">
+                            <input type="text" id="card_number" maxlength="4" placeholder="XXXX" onkeypress="inputNumber(event)">
+                            <input type="text" id="card_number" maxlength="4" placeholder="XXXX" onkeypress="inputNumber(event)">
+                        </div>
+                        <div id="name">
+                            <input type="text" id="user_name" placeholder="Name">
+                            <input type="text" id="user_name" placeholder="Surname">
+                        </div>
+                        <p>You Are Paying</p>
+                        <div id="order_info">
+                            <input type="text" id="sword_price_info" readonly>
+                            <input type="text" id="delivery_price_info" readonly>
+                        </div>
+                        <div id="finalize">
+                            <button type="submit" class="btn" onclick="completeOrder()">Submit</button>
+                            <button type="reset" class="btn" onclick="resetOrder()">Cancel</button>
+                        </div>
+                </div>
+            </div>
+            <!-- Total Price -->
+            <div id="total-price">
+                <h2 class="m-heading">Total Price</h2>
+                <input type="text" id="total_price" value="" readonly>
+            </div>
+            <!-- Button Next -->
+            <div id="next" onclick="prefs_disable()">
+                    <button type="submit">Next</button>
+            </div>
+            <!-- Footer -->
+            <footer id="order-footer" class="bg-dark text-center py-1">
+                <p>Copyright &copy; 2019, Gendry's Forge, All Rights 
+                    Reserved</p>
+            </footer>
+        </div>
+    </div>
+            
+    <script src="./js/main.js"></script>
+</body>
+</html>

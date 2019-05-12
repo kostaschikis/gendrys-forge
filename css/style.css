@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative'); /*GOOGLE FONT*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cinzel Decorative', cursive, sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: #FBFBFD;
+}
+
+.coins {
+    color: #FFD700;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark{
+    background: #2B292A;
+    color: #FBFBFD;
+}
+
+.bg-primary {
+    background: #2B292A;
+    color: #fff;
+}
+
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: inline-block;
+    color: #fff;
+    background: #2B292A;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-s {
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+    color: #fff;
+    background: #2B292A;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.btn:hover, .btn-s:hover {
+    background: #464444;
+}
+
+input[type=checkbox], input[type="radio"] {
+    width: 1rem; 
+    height: 1rem; 
+    cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: #2B292A;
+    color: #FBFBFD;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1.1rem;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a{
+    color: #FBFBFD;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+    background: #464444;
+    border-radius: 5px;
+}
+
+/* Showcase */
+#showcase{
+    background: #333 url('../img/forge.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color:#FBFBFD;
+}
+
+.showcase_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    /* Overlay */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;  
+    background-color: rgba(0, 0, 0, 0.3) 
+}
+
+/* Who */
+#who {
+    display: flex;
+}
+
+#who div {
+    flex: 1;
+}
+
+#who .who_img {
+    background: url('../img/gendry2.jpg') no-repeat
+    center center/cover; 
+}
+
+#who h2 {
+    margin-bottom: 2rem;
+}
+
+#who .who_content {
+    color: #FBFBFD;
+    text-align: center;
+    padding: 1.75rem;
+    border-bottom: 2px #333 dotted;
+}
+
+.who_content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+/* Make Your Sword */
+#sword {
+    background: #333 url('../img/forge2.jpg') no-repeat center center/cover;
+    position: relative;
+    color:#FBFBFD;
+}
+
+#sword_overlay {
+    /* Overlay */
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.6) 
+}
+
+#sword_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;  
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#sword_content #house input[type=submit] {
+    margin-top: -1.5rem;
+}
+
+#sword_image {
+    border: none;
+    background-color: rgba(43, 41, 42, 0.4);
+    border-radius: 12px;
+    height: 100%;
+    background-size: auto;
+    text-align: center;
+}
+
+#sword_image img {
+    width: 38%;
+    height: auto;
+}
+
+#sword h2 {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#sword h4, h3 {
+    padding-bottom: 0.75rem;
+}
+
+/* Randomize Button */
+#random_sword {
+    display: flex;
+    justify-content: center;
+    margin-right: 2.5%; /*Just To Center It Below The Image*/
+    margin-bottom: 1rem;
+}
+
+#random_sword button {
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #FFD700;
+    color: #2B292A;
+}
+
+#random_sword button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 217, 0, 0.7);
+}
+
+/* Delivery & Payment */
+#deliver_n_pay {
+    display: flex;
+}
+
+#deliver_n_pay div {
+    flex: 1;
+    background-color: rgb(43,41,42,0.4);
+    padding: 0.5rem 1rem;
+}
+
+#deliver_n_pay #delivery_content {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#deliver_n_pay #delivery_content ul {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+#deliver_n_pay #delivery_content p {
+    font-size: 1rem;
+    margin-top: -0.1rem;
+}
+
+/* Payment Section */
+#deliver_n_pay #payment {
+    display: none;
+    border-left: 2px #333 dotted;
+}
+
+/* Credit Card */
+#deliver_n_pay #payment #creditcard,
+#deliver_n_pay #payment p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+#deliver_n_pay #payment #creditcard input {
+    margin-right: 0.75rem;
+}
+
+#deliver_n_pay #payment #creditcard input[type=radio] {
+    margin-left: 1.5rem;
+}
+
+#deliver_n_pay #payment #creditcard_numbers, 
+#deliver_n_pay #payment #name{
+    padding: 0;
+    padding-top: 0.5rem;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+}
+
+#deliver_n_pay #payment #creditcard_numbers input, 
+#deliver_n_pay #payment #name input,
+#deliver_n_pay #payment #order_info input{
+    width: 50%;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #FBFBFD;
+    border: #2B292A solid;
+    border-radius: 12px;
+    color: #2B292A;
+    opacity: 0.8;
+}
+
+/* Finetuning The Price Fields */
+#deliver_n_pay #payment #order_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: none;
+    padding: 0%;
+    border: none;
+}
+
+#deliver_n_pay #payment #order_info input {
+    cursor: default;
+    width: 34%;
+    border: none;
+}
+
+/* Finetuning The Name Fields */
+#deliver_n_pay #payment #name {
+    margin-top: 0.3rem;
+}
+
+#deliver_n_pay #payment #name input {
+    background-color: #2B292A;
+    color: #FBFBFD;
+    width: 49%;
+}
+
+/* Submit Order & Cancel Buttons */
+#deliver_n_pay #payment #finalize {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+
+#deliver_n_pay #payment #finalize button {
+    margin-right: 0.5rem;
+    padding: 0.7rem;
+    border-radius: 10px;
+    background-color: #FFD700;
+    color: #2B292A;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+#deliver_n_pay #payment #finalize button:hover {
+    background-color: rgba(255, 217, 0, 0.589);
+}
+
+/* Dropdown Quantity */
+#deliver_n_pay #delivery_content select {
+    font-size: 1.2rem;
+    border: #2B292A;
+    border-radius: 4px;
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 2px;
+    opacity: 0.8;
+}
+
+/* Delivery Price Box */
+#deliver_n_pay #delivery_content #dev_price {
+    width: 15%;
+    padding: 0.5rem;
+    margin: 0 1.2rem 1rem 1.2rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #FBFBFD;
+    border: #2B292A solid;
+    border-radius: 6px;
+    color: black;
+    cursor: default;
+}
+
+/* Below Delivery & Payment */
+
+/* Total Price */
+#sword #total-price {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+#sword #total-price input {
+    margin: -0.75rem;
+}
+
+/* Total Price Box */
+#sword #total-price input[type=text] {
+    width: 12%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #2B292A;
+    border: #2B292A solid;
+    border-radius: 12px;
+    color: #FBFBFD;
+    opacity: 0.8;
+    cursor: default;
+}
+
+/* Button Next */
+#sword #next {
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+#sword #next button {
+    font-size: 1.5rem;
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    color: #2B292A;
+}
+
+#sword #next button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 217, 0, 0.7);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#order-footer {
+    margin-top: 2rem;
+}
+
