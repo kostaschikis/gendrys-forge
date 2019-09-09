@@ -142,7 +142,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Showcase */
 #showcase{
-    background: #333 url('../img/forge.jpg') no-repeat center center/cover;
+    background: #333 url('../img/forge.webp') no-repeat center center/cover;
     height: 100vh;
     position: relative;
     color:#FBFBFD;
@@ -174,7 +174,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #who .who_img {
-    background: url('../img/gendry2.jpg') no-repeat
+    background: url('../img/gendry2.webp') no-repeat
     center center/cover; 
 }
 
@@ -196,7 +196,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Make Your Sword */
 #sword {
-    background: #333 url('../img/forge2.jpg') no-repeat center center/cover;
+    background: #333 url('../img/forge2.webp') no-repeat center center/cover;
     position: relative;
     color:#FBFBFD;
 }
